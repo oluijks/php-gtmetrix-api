@@ -1,0 +1,23 @@
+{
+    "name": "oluijks/gtmetrix",
+    "description": "A PHP library to interact with the GTmetrix REST API (based on GTmetrix own examples)",
+    "require": {
+        "php": ">=5.4.7"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "3.8.*@dev"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Olaf Luijks",
+            "email": "oluijks@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-0": {
+            "GTmetrix\\": "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}
