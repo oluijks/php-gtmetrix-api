@@ -11,9 +11,9 @@ require_once __DIR__ . '/bootstrap/autoload.php';
 // $test = new Api("oluijks@gmail.com", "db5995f58e75bba0bc166db6cb534c14");
 
 $test = new GTmetrix\Api();
-$test->setUsername("oluijks@gmail.com");
-$test->setApiKey("db5995f58e75bba0bc166db6cb534c14");
-$test->setAdblockPlugin(true);
+$test->setUsername("oluijks@gmail.com")
+     ->setApiKey("db5995f58e75bba0bc166db6cb534c14")
+     ->setAdblockPlugin(true);
 
 echo '<pre>';
 

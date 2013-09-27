@@ -84,6 +84,7 @@ class Api {
      *
      * @access  public
      * @param   $username
+     * @return  $this
      * @throws  InvalidArgumentException
      * @todo    validate
      */
@@ -94,6 +95,7 @@ class Api {
             throw new InvalidArgumentException('Invalid email address');
         }
         $this->_username = $username;
+        return $this;
     }
 
     /**
@@ -101,6 +103,7 @@ class Api {
      *
      * @access  public
      * @param   $apiKey
+     * @return  $this
      * @throws  InvalidArgumentException
      * @todo    validate
      */
@@ -111,6 +114,7 @@ class Api {
             throw new InvalidArgumentException('Invalid api key');
         }
         $this->_apiKey = $apiKey;
+        return $this;
     }
 
     /**
@@ -118,10 +122,12 @@ class Api {
      *
      * @access  public
      * @param   $userAgent
+     * @return  $this
      */
     public function setUserAgent($userAgent)
     {
         $this->_userAgent = $userAgent;
+        return $this;
     }
 
     /**
@@ -167,7 +173,6 @@ class Api {
         }
 
         curl_close($ch);
-
         return $results;
     }
 
@@ -417,10 +422,12 @@ class Api {
      *
      * @access  public
      * @param   bool $use
+     * @return  $this
      */
     public function setAdblockPlugin($use = false)
     {
         $this->_useAdblockPlugin = $use;
+        return $this;
     }
 
     /**
@@ -445,11 +452,13 @@ class Api {
     }
 
     /**
-     * @param $id
+     * @param   $id
+     * @return  $this
      */
     public function setTestLocation($id)
     {
         $this->_testLocationId = (int)$id;
+        return $this;
     }
 
     /**
