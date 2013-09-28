@@ -61,9 +61,8 @@ Fetch the rerourse url's
 
     $resourceUrls = $test->getResourceUrls();
 
-7. Download resources (files: har.txt, pagespeed.txt, pagespeed_files.tar, report_pdf.pdf, screenshot.jpg, yslow.txt)
-   You can specify specific items to download or append your test id to the filenames.
-
+Download resources (files: har.txt, pagespeed.txt, pagespeed_files.tar, report_pdf.pdf, screenshot.jpg, yslow.txt)
+You can specify specific items to download or append your test id to the file names.
 
     $test->downloadResources(null, './downloads/', false);
 
