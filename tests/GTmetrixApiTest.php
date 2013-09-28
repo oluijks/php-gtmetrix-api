@@ -9,6 +9,8 @@
 
 use GTmetrix\Api;
 
+require_once __DIR__ . '/../bootstrap/autoload.php';
+
 class GTmetrixApiTest extends \PHPUnit_Framework_TestCase {
 
     /**
