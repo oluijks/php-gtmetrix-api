@@ -26,35 +26,47 @@ Next, update composer:
 Usage
 -----
 
-    // 1. Create a new object
+Create a new object
+
     $test = new GTmetrix\Api();
 
-    // 1.1. Or create a object via the constructor
+Or create a object via the constructor
+
     $test = new Api("email@example.com", "your-api-key");
 
-    // 2. Set username, api-key and some options
+Set username, api-key and some options
+
     $test->setUsername("email@example.com")
          ->setApiKey("your-api-key")
          ->setAdblockPlugin(true);
 
-    // 3.
+Call testSite and provide at least a url
+
     $testId = $test->testSite([
         'url' => 'http://example.com'
-        // more options (see Options)
+        // other options
+        // , 'x-metrix-adblock' => 1
+        // , 'x-metrix-video' => 1
     ]);
 
-    // 4. Wait for the test results
+Wait for the test results
+
     $test->waitForResults();
 
-    // 5.
+Fetch the test results
+
     $results = $test->getTestResults();
 
-    // 6.
+Fetch the rerourse url's
+
     $resourceUrls = $test->getResourceUrls();
 
-    // 7. Download resources (files: har.txt, pagespeed.txt, pagespeed_files.tar, report_pdf.pdf, screenshot.jpg, yslow.txt)
-    //    You can specify specific items to download or append your test Id.
+7. Download resources (files: har.txt, pagespeed.txt, pagespeed_files.tar, report_pdf.pdf, screenshot.jpg, yslow.txt)
+   You can specify specific items to download or append your test id to the filenames.
+
+
     $test->downloadResources(null, './downloads/', false);
+
 
 Options
 -------
