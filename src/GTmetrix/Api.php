@@ -9,7 +9,7 @@
 
 use GTmetrix\Exception\InvalidArgumentException;
 
-class Api {
+final class Api {
 
     /**
      * Base URL for the GTmetrix API
